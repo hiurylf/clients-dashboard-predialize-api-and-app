@@ -1,0 +1,10 @@
+<div class="totals-content" *ngIf="totals">
+  <p>Números Totais</p>
+  <p>
+    <span *ngIf="totals.clients">
+      Clientes: <span bold>{{totals.clients}}</span> &nbsp;&nbsp;
+    </span>
+    Empreendimentos: <span bold>{{totals.enterprises}}</span> &nbsp;&nbsp;
+    Imóveis: <span bold>{{totals.realties}}</span>
+  </p>
+</div>

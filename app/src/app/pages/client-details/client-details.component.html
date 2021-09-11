@@ -1,0 +1,27 @@
+<app-searchbar (valueChange)="searchChange($event)"></app-searchbar>
+
+<mat-card *ngIf="client">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="header-image"
+      [ngStyle]="{backgroundImage: 'url(' + client.image_src  + ')'}"
+    >
+    </div>
+    <div class="client-details">
+      <mat-card-subtitle>{{client._id}}</mat-card-subtitle>
+      <mat-card-title>{{client.name}}</mat-card-title>
+    </div>
+  </mat-card-header>
+</mat-card>
+
+<app-totals [totals]="totals"></app-totals>
+
+<app-grid-list
+  [listItems]="enterprises"
+  notFoundText="Empreendimento não encontrado"
+>
+</app-grid-list>
+
+
+

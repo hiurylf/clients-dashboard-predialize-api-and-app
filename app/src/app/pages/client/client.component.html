@@ -1,0 +1,10 @@
+<app-searchbar (valueChange)="searchChange($event)"></app-searchbar>
+
+<app-totals [totals]="totals"></app-totals>
+
+<app-grid-list
+  [listItems]="clients"
+  notFoundText="Cliente não encontrado"
+  [showFooterButton]="true"
+>
+</app-grid-list>

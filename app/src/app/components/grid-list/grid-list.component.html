@@ -1,0 +1,7 @@
+<mat-grid-list class="list-content" [cols]="columns" rowHeight="3:6">
+  <mat-grid-tile *ngFor="let item of listItems">
+    <app-card-item [value]="item" [showFooterButton]="showFooterButton"></app-card-item>
+  </mat-grid-tile>
+
+  <p *ngIf="listItems && !listItems.length">{{notFoundText}}</p>
+</mat-grid-list>

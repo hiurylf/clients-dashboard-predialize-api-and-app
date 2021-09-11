@@ -1,0 +1,21 @@
+<mat-card class="card-content">
+  <mat-card-header>
+    <mat-card-subtitle>{{value._id}}</mat-card-subtitle>
+    <mat-card-title>{{value.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="value.image_src" [alt]="value.name" onerror="this.src='/assets/not-found.png'">
+  <mat-card-content>
+    <p *ngIf="value.enterprises_amount">
+      Empreendimentos: {{value.enterprises_amount}}
+    </p>
+    <p *ngIf="value.client_name">
+      Cliente: {{value.client_name}}
+    </p>
+    <p>
+      Imóveis: {{value.realties_amount}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card-actions-content" *ngIf="showFooterButton">
+    <button mat-button routerLink="{{'/client/'+value._id}}">Saiba mais</button>
+  </mat-card-actions>
+</mat-card>

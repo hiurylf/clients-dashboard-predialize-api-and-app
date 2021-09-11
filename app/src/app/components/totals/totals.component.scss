@@ -1,0 +1,21 @@
+.totals-content {
+  margin: 8px 0;
+  text-align: center;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    &:last-child {
+      font-size: 0.95rem;
+
+      span[bold] {
+        font-weight: 500;
+      }
+    }
+  }
+}
